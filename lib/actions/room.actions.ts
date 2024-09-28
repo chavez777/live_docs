@@ -19,7 +19,7 @@ try {
       const room = await liveblocks.createRoom(roomId, {
         metadata,
         usersAccesses,
-        defaultAccesses: []
+        defaultAccesses: ['room:write']
       });
       revalidatePath('/');
       return parseStringify(room);
